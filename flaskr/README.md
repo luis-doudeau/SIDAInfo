@@ -50,5 +50,4 @@ Programmes/logiciels/ressources utilisé pour développer ce projet
 Auteur : 
 
    Luis DOUDEAU
-   Thomas FAUCHER
-   Lenny DE NARDI
+
