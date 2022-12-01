@@ -1,11 +1,14 @@
-from .app import app,login_manager
-from .models import * 
-from .ConnexionMySQL import *
+from .app import app
 from flask import render_template
-from flask_login import LoginManager,login_user,login_required,logout_user,current_user
 from flask import Flask,redirect,url_for,request
-from flask_sqlalchemy import SQLAlchemy
 
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+"""
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -136,10 +139,7 @@ def data_cours():
 
 @app.route('/api/datamoniteurs')
 def data_moniteurs():
-    """
-    Il prend une liste de tuples et renvoie un dictionnaire avec une liste de dictionnaires
-    :return: Un dictionnaire avec une clé "data" et une valeur d'une liste de dictionnaires.
-    """
+
     data = {"data":[]}
     lignes = get_info_all_moniteur()
     for ligne in lignes:
@@ -174,10 +174,7 @@ def data_reservations():
 
 @app.route('/api/datapersonnes')
 def data_personne():
-    """
-    Il prend une liste de tuples et renvoie un dictionnaire avec une liste de dictionnaires
-    :return: Un dictionnaire avec une clé "data" et une valeur d'une liste de dictionnaires.
-    """
+
     data = {"data":[]}
     personnes = get_info_all_personnes()
     for personne in personnes:
@@ -275,10 +272,6 @@ def DeleteReservation():
 
 @app.route('/AddMoniteur',methods=['POST'])
 def AddMoniteur():
-    """
-    Il prend les données de formulaire de la page html et les insère dans la base de données
-    :return: Rien.
-    """
     prenom = request.form["prenom"]
     nom = request.form["nom"]
     ddn = request.form["date"]
@@ -295,10 +288,6 @@ def AddMoniteur():
 
 @app.route('/AddCours',methods=['POST'])
 def AddCours():
-    """
-    Il prend les données du formulaire de la requête, et les passe à la fonction ajouteCours
-    :return: Rien.
-    """
     nom = request.form["nom"]
     descc = request.form["descc"]
     type = request.form["type"]
@@ -313,10 +302,7 @@ def AddCours():
 
 @app.route('/AddPersonne',methods=['POST'])
 def AddPersonne():
-    """
-    Il prend les données du formulaire de la requête, et les passe à la fonction ajoutePersonne
-    :return: Rien.
-    """
+
     nomp = request.form["nom"]
     prenomp = request.form["prenom"]
     ddn = request.form["datepicker"]
@@ -352,3 +338,4 @@ def deleteCours():
 def deletePersonne():
     delete_personne(request.form["id"])
     return ""
+    """
