@@ -1,0 +1,12 @@
+drop table if exists reserver;
+drop table if exists poney;
+drop table if exists cours;
+drop table if exists client;
+drop table if exists moniteur;
+drop table if exists personne;
+drop table if exists ancien_reserver;
+drop table if exists ancien_poney;
+drop table if exists ancien_cours;
+drop table if exists ancien_client;
+drop table if exists ancien_moniteur;
+drop table if exists ancien_personne;

@@ -1,1 +1,6 @@
 # SIDAInfo
+
+# CHARPENTIER Maxym
+# DOUDEAU Luis
+# FRANCLET
+ 
