@@ -59,7 +59,7 @@ class Cours(db.Model):
     moniteur = relationship("Moniteur")
     
     def __init__(self, idc, nomc,descc,typec,prix, id) -> None:
-        self.idc = idc
+        self.idc = id
         self.nomc = nomc
         self.descc = descc
         self.typec = typec
